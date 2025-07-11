@@ -58,7 +58,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
+ 
       {/* Chi Sono Section */}
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
