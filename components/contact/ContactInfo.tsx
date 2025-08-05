@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Instagram } from "lucide-react"
-import { SiTiktok } from "react-icons/si"
+import { Mail } from "lucide-react"
+import { SiInstagram, SiTiktok } from "react-icons/si"
 
 export default function ContactInfo() {
   return (
@@ -36,7 +36,7 @@ export default function ContactInfo() {
           <div className="space-y-4">
             <a href="https://www.instagram.com/astrocapmerch" className="flex items-center space-x-4 text-white hover:text-blue-400 transition-colors">
               <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-3 rounded-full">
-                <Instagram className="h-6 w-6" />
+                <SiInstagram className="h-6 w-6" />
               </div>
               <div>
                 <p className="font-semibold font-deardorf text-2xl">Instagram</p>

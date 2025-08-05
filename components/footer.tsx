@@ -36,7 +36,7 @@ export default function Footer() {
             <a href="#" className="hover:text-blue-400 transition-colors">
               <SiTiktok className="h-6 w-6" />
             </a>
-            <a href="#" className="hover:text-blue-400 transition-colors">
+            <a href="mailto:AstroCapMerch@gmail.com" className="hover:text-blue-400 transition-colors">
               <Mail className="h-6 w-6" />
             </a>
           </div>

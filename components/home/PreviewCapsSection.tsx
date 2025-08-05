@@ -2,7 +2,7 @@ import { CapCard } from "@/components/CapCard"
 
 export default function PreviewCapsSection() {
   return (
-    <section style={{ backgroundColor: "rgb(15, 58, 175)" }} className="py-20">
+    <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-600">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-black text-center text-white mb-12">
           <span className="bg-gradient-to-r font-jakarta from-white to-white bg-clip-text text-transparent">

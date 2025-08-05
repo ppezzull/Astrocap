@@ -1,16 +1,57 @@
-import { useActionState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import type { ContactState } from "@/lib/_actions/send-email"
-import { sendEmail } from "@/lib/_actions/send-email"
+import { useActionState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import type { ContactState } from "@/lib/_actions/send-email";
+import { sendEmail } from "@/lib/_actions/send-email";
+import { useState } from "react";
+import ContactImagesInput from "./ContactImagesInput";
 
-const initialState: ContactState | undefined = undefined
+const initialState: ContactState | undefined = undefined;
 
 export default function ContactForm() {
-  const [state, formAction] = useActionState(sendEmail, initialState)
+  const [state, formAction] = useActionState(sendEmail, initialState);
+
+  // State for image previews and files
+  const [filePreviews, setFilePreviews] = useState<string[]>([]);
+  const [files, setFiles] = useState<(File | null)[]>([]);
+  const maxImages = 5;
+
+  // Handle file input change
+  const handleFileChange = (file: File | null, idx: number) => {
+    if (!file) {
+      // Remove file and preview at idx
+      setFiles((prev) => prev.filter((_, i) => i !== idx));
+      setFilePreviews((prev) => prev.filter((_, i) => i !== idx));
+      return;
+    }
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setFilePreviews((prev) => {
+        const updated = [...prev];
+        updated[idx] = reader.result as string;
+        return updated;
+      });
+    };
+    reader.readAsDataURL(file);
+    setFiles((prev) => {
+      const updated = [...prev];
+      updated[idx] = file;
+      // Add a new empty slot if at the end and under maxImages
+      if (updated.length < maxImages && idx === updated.length - 1) {
+        updated.push(null);
+      }
+      return updated;
+    });
+  };
+
+  // Remove an image
+  const handleRemove = (idx: number) => {
+    setFiles((prev) => prev.filter((_, i) => i !== idx));
+    setFilePreviews((prev) => prev.filter((_, i) => i !== idx));
+  };
 
   return (
     <Card className="bg-gray-900 border-blue-500/30">
@@ -24,20 +65,27 @@ export default function ContactForm() {
       <CardContent>
         <form action={formAction} className="space-y-6">
           <div>
-            <Label htmlFor="nome" className="text-white font-semibold font-deardorf text-3xl">
+            <Label
+              htmlFor="nome"
+              className="text-white font-semibold font-deardorf text-3xl"
+            >
               Nome *
             </Label>
             <Input
               id="nome"
               name="nome"
               required
-              className="bg-black border-blue-500/50 text-white text-2xl focus:border-blue-500"
+              className="bg-black border-blue-500/50 text-white text-2xl focus:border-blue-500 placeholder:text-xl placeholder:font-bold"
+              style={{ fontSize: "1.25rem", padding: "0.75rem" }}
               placeholder="Il tuo nome"
             />
           </div>
 
           <div>
-            <Label htmlFor="email" className="text-white font-semibold font-deardorf text-3xl">
+            <Label
+              htmlFor="email"
+              className="text-white font-semibold font-deardorf text-3xl"
+            >
               Email *
             </Label>
             <Input
@@ -45,13 +93,17 @@ export default function ContactForm() {
               name="email"
               type="email"
               required
-              className="bg-black border-blue-500/50 text-white text-2xl focus:border-blue-500"
+              className="bg-black border-blue-500/50 text-white text-2xl focus:border-blue-500 placeholder:text-xl placeholder:font-bold"
+              style={{ fontSize: "1.25rem", padding: "0.75rem" }}
               placeholder="la tua mail"
             />
           </div>
 
           <div>
-            <Label htmlFor="messaggio" className="text-white font-semibold font-deardorf text-3xl">
+            <Label
+              htmlFor="messaggio"
+              className="text-white font-semibold font-deardorf text-3xl"
+            >
               Messaggio *
             </Label>
             <Textarea
@@ -59,19 +111,26 @@ export default function ContactForm() {
               name="messaggio"
               required
               rows={6}
-              className="bg-black border-blue-500/50 text-white text-2xl focus:border-blue-500"
+              className="bg-black border-blue-500/50 text-white text-2xl focus:border-blue-500 placeholder:text-xl placeholder:font-bold"
+              style={{ fontSize: "1.25rem", padding: "0.75rem" }}
               placeholder="Descrivi la tua idea per il cappello personalizzato..."
             />
           </div>
 
-          <div>
-            <Label htmlFor="files" className="text-white font-semibold font-deardorf text-3xl">File Upload (Opzionale)</Label>
-            <Input id="files" name="files" type="file" accept="image/png,image/jpeg" multiple className="bg-black border-blue-500/50 text-white text-xl text-center focus:border-blue-500" />
-          </div>
+          <ContactImagesInput
+            filePreviews={filePreviews}
+            onFileChange={handleFileChange}
+            onRemove={handleRemove}
+            maxImages={maxImages}
+          />
 
-          {state?.status === "success" && <p className="text-green-500">Messaggio inviato con successo!</p>}
+          {state?.status === "success" && (
+            <p className="text-green-500">Messaggio inviato con successo!</p>
+          )}
           {state?.status === "error" && (
-            <p className="text-red-500">Errore nell'invio. Riprova o scrivimi direttamente!</p>
+            <p className="text-red-500">
+              Errore nell'invio. Riprova o scrivimi direttamente!
+            </p>
           )}
 
           <Button
@@ -83,5 +142,5 @@ export default function ContactForm() {
         </form>
       </CardContent>
     </Card>
-  )
+  );
 }
