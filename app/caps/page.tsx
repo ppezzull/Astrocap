@@ -18,7 +18,7 @@ export default function CapsPage() {
   return (
     <div className="min-h-screen bg-black">
       {/* Header */}
-      <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-600">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-7xl font-black text-white mb-6 tracking-wider">I MIEI CAPPELLI</h1>
           <p className="text-xl text-white font-semibold">PERSONALIZZATI</p>
@@ -32,7 +32,7 @@ export default function CapsPage() {
             {caps.map((cap, index) => (
               <Card
                 key={index}
-                className="bg-gray-900 border-orange-500/30 hover:border-orange-500 transition-all duration-300 transform hover:scale-105 group"
+                className="bg-gray-900 border-blue-500/30 hover:border-blue-500 transition-all duration-300 transform hover:scale-105 group"
               >
                 <CardContent className="p-0">
                   <div className="relative overflow-hidden">
@@ -47,7 +47,7 @@ export default function CapsPage() {
                   </div>
                   <div className="p-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{cap.name}</h3>
-                    <p className="text-orange-400 font-semibold">{cap.style}</p>
+                    <p className="text-blue-400 font-semibold">{cap.style}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -64,7 +64,7 @@ export default function CapsPage() {
             Ogni cappello può diventare un'opera d'arte personalizzata
           </p>
           <Link href="/contact">
-            <Button className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold px-12 py-6 text-xl tracking-wide shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 transform hover:scale-105">
+            <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold px-12 py-6 text-xl tracking-wide shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105">
               CONTATTAMI
             </Button>
           </Link>

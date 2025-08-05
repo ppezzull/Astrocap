@@ -27,30 +27,30 @@ export default function HomePage() {
       >
         {/* Animated overlay */}
         <div
-          className={`absolute inset-0 bg-black/60 transition-all duration-2000 ${isVisible ? "animate-pulse" : ""}`}
+          className={`absolute inset-0 bg-black/60 transition-all duration-2000`}
         />
 
         {/* Hero Content */}
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
           <div className="relative">
             {/* Flame background effect */}
-            <div className="absolute inset-0 bg-gradient-to-t from-orange-600/30 via-red-500/20 to-transparent rounded-3xl blur-3xl" />
+            <div className="absolute inset-0 bg-gradient-to-t from-blue-600/30 via-blue-500/20 to-transparent rounded-3xl blur-3xl" />
 
-            <div className="relative bg-black/50 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-orange-500/30">
+            <div className="relative bg-black/50 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-blue-500/30">
               <h1 className="text-4xl md:text-7xl font-black mb-6 tracking-wider">
-                <span className="bg-gradient-to-r from-orange-400 via-red-500 to-orange-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
                   CAPPELLI PERSONALIZZATI
                 </span>
                 <br />
                 <span className="text-white">CON BRILLANTINI</span>
               </h1>
 
-              <p className="text-xl md:text-2xl mb-8 text-orange-200 font-semibold">
+              <p className="text-xl md:text-2xl mb-8 text-blue-200 font-semibold">
                 Ogni cappello racconta la tua storia, con fiamme e stile.
               </p>
 
               <Link href="/caps">
-                <Button className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold px-8 py-4 text-xl tracking-wide shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 transform hover:scale-105">
+                <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold px-8 py-4 text-xl tracking-wide shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105">
                   SCOPRI I CAPPELLI
                 </Button>
               </Link>
@@ -65,7 +65,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
-                <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">
                   CHI SONO
                 </span>
               </h2>
@@ -79,7 +79,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-2xl blur-2xl" />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-blue-500/20 rounded-2xl blur-2xl" />
               <Image
                 src="/images/caps/cap8.png"
                 alt="Custom cap in hand"
@@ -96,7 +96,7 @@ export default function HomePage() {
       <section style={{ backgroundColor: "rgb(15, 58, 175)" }} className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-black text-center text-white mb-12">
-            <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">
               ANTEPRIMA CAPPELLI
             </span>
           </h2>
@@ -109,11 +109,11 @@ export default function HomePage() {
             ].map((cap, index) => (
               <Card
                 key={index}
-                className="bg-black/50 border-orange-500/30 hover:border-orange-500 transition-all duration-300 transform hover:scale-105"
+                className="bg-black/50 border-blue-500/30 hover:border-blue-500 transition-all duration-300 transform hover:scale-105"
               >
                 <CardContent className="p-6">
                   <div className="relative mb-4">
-                    <div className="absolute inset-0 bg-gradient-to-t from-orange-500/20 to-transparent rounded-lg" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-blue-500/20 to-transparent rounded-lg" />
                     <Image
                       src={cap.src || "/placeholder.svg"}
                       alt={cap.name}
@@ -123,7 +123,7 @@ export default function HomePage() {
                     />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{cap.name}</h3>
-                  <p className="text-orange-300">{cap.style}</p>
+                  <p className="text-blue-300">{cap.style}</p>
                 </CardContent>
               </Card>
             ))}
@@ -135,7 +135,7 @@ export default function HomePage() {
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-black text-center text-white mb-12">
-            <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">
               IL PROCESSO
             </span>
           </h2>
@@ -148,8 +148,8 @@ export default function HomePage() {
             ].map((step, index) => (
               <div key={index} className="text-center">
                 <div className="relative mb-6">
-                  <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-500 rounded-full blur-xl opacity-50" />
-                  <div className="relative bg-gradient-to-r from-orange-500 to-red-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-500 rounded-full blur-xl opacity-50" />
+                  <div className="relative bg-gradient-to-r from-blue-500 to-blue-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto">
                     <step.icon className="h-10 w-10 text-white" />
                   </div>
                 </div>
@@ -161,7 +161,7 @@ export default function HomePage() {
 
           <div className="text-center">
             <Link href="/process">
-              <Button className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold px-8 py-4 text-lg">
+              <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold px-8 py-4 text-lg">
                 SCOPRI IL PROCESSO COMPLETO
               </Button>
             </Link>
@@ -170,7 +170,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Banner */}
-      <section className="py-20 bg-gradient-to-r from-orange-600 via-red-600 to-orange-600">
+      <section className="py-20 bg-gradient-to-r from-blue-600 via-blue-600 to-blue-600">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-6xl font-black text-white mb-6">HAI UN'IDEA?</h2>
           <p className="text-2xl text-white mb-8 font-semibold">Rendila realtà.</p>

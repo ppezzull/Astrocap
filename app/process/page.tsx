@@ -23,7 +23,7 @@ const steps = [
     title: "PERSONALIZZO IL CAPPELLO",
     description:
       "Con precisione artigianale, applico ogni cristallo e dettaglio a mano, creando un pezzo unico che rispecchia la tua personalità.",
-    color: "from-orange-500 to-red-600",
+    color: "from-blue-500 to-blue-600",
   },
   {
     icon: Sparkles,
@@ -38,7 +38,7 @@ export default function ProcessPage() {
   return (
     <div className="min-h-screen bg-black">
       {/* Header */}
-      <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-600">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-7xl font-black text-white mb-6 tracking-wider">COME FUNZIONA</h1>
           <p className="text-xl text-white font-semibold">DAL BOZZETTO ALLA FIAMMA</p>
@@ -49,7 +49,7 @@ export default function ProcessPage() {
       <section className="py-16">
         <div className="container mx-auto px-4 text-center max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">
               Il Mio Metodo di Creazione
             </span>
           </h2>
@@ -89,7 +89,7 @@ export default function ProcessPage() {
 
                 {/* Step Content */}
                 <div className="flex-1">
-                  <Card className="bg-gray-900 border-orange-500/30 hover:border-orange-500 transition-all duration-300">
+                  <Card className="bg-gray-900 border-blue-500/30 hover:border-blue-500 transition-all duration-300">
                     <CardContent className="p-8">
                       <h3 className="text-3xl font-black text-white mb-4">{step.title}</h3>
                       <p className="text-lg text-gray-300 leading-relaxed">{step.description}</p>
@@ -108,7 +108,7 @@ export default function ProcessPage() {
           <h2 className="text-4xl md:text-6xl font-black text-white mb-6">INIZIA OGGI IL TUO</h2>
           <p className="text-2xl text-white mb-8 font-semibold">CAPPELLO PERSONALIZZATO</p>
           <Link href="/contact">
-            <Button className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold px-12 py-6 text-xl tracking-wide shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 transform hover:scale-105">
+            <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold px-12 py-6 text-xl tracking-wide shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105">
               DRIP NOW!
             </Button>
           </Link>
