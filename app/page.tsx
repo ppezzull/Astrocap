@@ -66,7 +66,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
-                <span className="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r font-jakarta from-blue-400 to-blue-500 bg-clip-text text-transparent">
                   CHI SONO
                 </span>
               </h2>
@@ -97,7 +97,7 @@ export default function HomePage() {
       <section style={{ backgroundColor: "rgb(15, 58, 175)" }} className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-black text-center text-white mb-12">
-            <span className="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r font-jakarta from-blue-400 to-blue-500 bg-clip-text text-transparent">
               ANTEPRIMA CAPPELLI
             </span>
           </h2>
@@ -118,7 +118,7 @@ export default function HomePage() {
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-black text-center text-white mb-12">
-            <span className="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r font-jakarta from-blue-400 to-blue-500 bg-clip-text text-transparent">
               IL PROCESSO
             </span>
           </h2>
@@ -155,7 +155,7 @@ export default function HomePage() {
       {/* CTA Banner */}
       <section className="py-20 bg-gradient-to-r from-blue-600 via-blue-600 to-blue-600">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-6">HAI UN'IDEA?</h2>
+          <h2 className="text-4xl md:text-6xl font-black text-white mb-6 font-jakarta">PROPONI LA TUA IDEA</h2>
           <p className="text-2xl text-white mb-8 font-semibold">Rendila realtà.</p>
           <Link href="/contact">
             <Button className="bg-black hover:bg-gray-900 text-white font-bold px-12 py-6 text-xl tracking-wide shadow-2xl hover:shadow-black/50 transition-all duration-300 transform hover:scale-105">

@@ -2,6 +2,10 @@ x:root {
   --font-title-jakarta: 'JAKARTA', sans-serif;
 }
 
+.font-jakarta {
+  font-family: var(--font-title-jakarta), sans-serif;
+}
+
 .font-title {
   font-family: var(--font-title-jakarta), sans-serif;
 }

@@ -2,9 +2,9 @@
 
 import type React from "react"
 
-import { sendEmail } from "@/app/contact/_actions/send-email"
+import { sendEmail } from "@/lib/_actions/send-email"
 import { useActionState } from "react"
-import type { ContactState } from "@/app/contact/_actions/send-email"
+import type { ContactState } from "@/lib/_actions/send-email"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
