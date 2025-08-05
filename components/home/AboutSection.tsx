@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export default function AboutSection() {
   return (
@@ -12,16 +12,18 @@ export default function AboutSection() {
               </span>
             </h2>
             <p className="text-2xl text-gray-300 mb-6 leading-relaxed font-deardorf">
-              Sono un artista specializzato nella personalizzazione di cappelli con cristalli e brillantini. Ogni
-              pezzo è unico, creato a mano con passione e dedizione per lo stile streetwear.
+              Sono un artista specializzato nella personalizzazione di cappelli
+              con cristalli e brillantini. Ogni pezzo è unico, creato a mano con
+              passione e dedizione per lo stile streetwear.
             </p>
             <p className="text-2xl text-gray-300 leading-relaxed font-deardorf">
-              La mia missione è trasformare cappelli ordinari in opere d'arte che riflettono la personalità e lo stile
-              di chi li indossa. Fiamme, cristalli e design audaci sono la mia firma.
+              La mia missione è trasformare cappelli ordinari in opere d'arte
+              che riflettono la personalità e lo stile di chi li indossa.
+              Fiamme, cristalli e design audaci sono la mia firma.
             </p>
           </div>
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-blue-500/20 rounded-2xl blur-2xl" />
+          <div className="relative flex items-center justify-center">
+            <div className="absolute left-1/2 top-1/2 w-4/5 h-4/5 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-blue-500/20 to-blue-500/20 rounded-2xl blur-2xl pointer-events-none" />
             <Image
               src="/images/caps/cap8.png"
               alt="Custom cap in hand"
@@ -33,5 +35,5 @@ export default function AboutSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

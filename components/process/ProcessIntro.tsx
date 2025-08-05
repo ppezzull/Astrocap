@@ -7,7 +7,7 @@ export default function ProcessIntro() {
             Il Mio Metodo di Creazione
           </span>
         </h2>
-        <p className="text-2xl text-gray-300 leading-relaxed font-deardorf">
+        <p className="text-3xl text-gray-300 leading-relaxed font-deardorf">
           Ogni cappello personalizzato nasce da un processo creativo unico che combina la tua visione con la mia
           esperienza artigianale. Dalla prima idea al prodotto finito, ogni fase è curata nei minimi dettagli per
           garantire un risultato eccezionale.
