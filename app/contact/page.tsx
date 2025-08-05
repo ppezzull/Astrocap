@@ -2,33 +2,21 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { sendEmail } from "@/app/contact/_actions/send-email"
+import { useActionState } from "react"
+import type { ContactState } from "@/app/contact/_actions/send-email"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { Instagram, Mail, Upload } from "lucide-react"
+import { Instagram, Mail } from "lucide-react"
+import { SiTiktok } from "react-icons/si"
+
+const initialState: ContactState | undefined = undefined
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    nome: "",
-    email: "",
-    messaggio: "",
-  })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
-  }
+  const [state, formAction] = useActionState(sendEmail, initialState);
 
   return (
     <div className="min-h-screen bg-black">
@@ -53,7 +41,7 @@ export default function ContactPage() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form action={formAction} className="space-y-6">
                   <div>
                     <Label htmlFor="nome" className="text-white font-semibold">
                       Nome *
@@ -61,8 +49,6 @@ export default function ContactPage() {
                     <Input
                       id="nome"
                       name="nome"
-                      value={formData.nome}
-                      onChange={handleChange}
                       required
                       className="bg-black border-blue-500/50 text-white focus:border-blue-500"
                       placeholder="Il tuo nome"
@@ -77,8 +63,6 @@ export default function ContactPage() {
                       id="email"
                       name="email"
                       type="email"
-                      value={formData.email}
-                      onChange={handleChange}
                       required
                       className="bg-black border-blue-500/50 text-white focus:border-blue-500"
                       placeholder="la.tua.email@esempio.com"
@@ -92,8 +76,6 @@ export default function ContactPage() {
                     <Textarea
                       id="messaggio"
                       name="messaggio"
-                      value={formData.messaggio}
-                      onChange={handleChange}
                       required
                       rows={6}
                       className="bg-black border-blue-500/50 text-white focus:border-blue-500"
@@ -102,14 +84,14 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <Label className="text-white font-semibold">File Upload (Opzionale)</Label>
-                    <div className="mt-2 border-2 border-dashed border-blue-500/50 rounded-lg p-6 text-center hover:border-blue-500 transition-colors">
-                      <Upload className="h-12 w-12 text-blue-400 mx-auto mb-4" />
-                      <p className="text-gray-300">Carica immagini di riferimento o ispirazioni</p>
-                      <p className="text-sm text-gray-500 mt-2">PNG, JPG fino a 10MB</p>
-                    </div>
+                    <Label htmlFor="files" className="text-white font-semibold">File Upload (Opzionale)</Label>
+                    <Input id="files" name="files" type="file" accept="image/png,image/jpeg" multiple className="bg-black border-blue-500/50 text-white focus:border-blue-500" />
                   </div>
 
+                  {state?.status === "success" && <p className="text-green-500">Messaggio inviato con successo!</p>}
+                  {state?.status === "error" && (
+                    <p className="text-red-500">{state.errors.general?.[0] ?? "Errore invio messaggio"}</p>
+                  )}
                   <Button
                     type="submit"
                     className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-4 text-lg tracking-wide"
@@ -169,9 +151,9 @@ export default function ContactPage() {
                       className="flex items-center space-x-4 text-white hover:text-blue-400 transition-colors"
                     >
                       <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-3 rounded-full">
-                        <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-2.08v5.73a3.87 3.87 0 01-3.87 3.87 3.81 3.81 0 01-3.81-3.81 3.81 3.81 0 013.81-3.81c.21 0 .41.02.6.07V1.96c-.2-.02-.4-.02-.6-.02A5.87 5.87 0 004 7.81a5.87 5.87 0 005.87 5.87 5.87 5.87 0 005.87-5.87V9.47a6.93 6.93 0 004.09 1.33v-2.08a4.86 4.86 0 01-4.24-2.03z" />
-                        </svg>
+                        <SiTiktok className="h-6 w-6" />
+                          
+                        
                       </div>
                       <div>
                         <p className="font-semibold">TikTok</p>
@@ -183,7 +165,7 @@ export default function ContactPage() {
               </Card>
 
               {/* Response Time */}
-              <Card className="bg-gradient-to-r from-blue-500/20 to-blue-500/20 border-blue-500/50">
+              <Card className="bg-gray-900 border-blue-500/50">
                 <CardContent className="p-8 text-center">
                   <h3 className="text-xl font-bold text-white mb-2">TEMPO DI RISPOSTA</h3>
                   <p className="text-blue-200">

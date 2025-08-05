@@ -1,11 +1,10 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { jakarta } from "@/app/fonts"
 import "./globals.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 
-const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "AstroCap - Cappelli Personalizzati con Brillantini",
@@ -20,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="it">
-      <body className={inter.className}>
+    <html lang="it" className={jakarta.variable}>
+      <body className="bg-black">
         <Header />
         <main>{children}</main>
         <Footer />

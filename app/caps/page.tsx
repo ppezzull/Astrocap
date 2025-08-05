@@ -1,7 +1,6 @@
-import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { CapCard } from "@/components/CapCard"
 
 const caps = [
   { src: "/images/caps/cap1.png", name: "Fiamma Nera", style: "NY Flames Edition" },
@@ -30,27 +29,7 @@ export default function CapsPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {caps.map((cap, index) => (
-              <Card
-                key={index}
-                className="bg-gray-900 border-blue-500/30 hover:border-blue-500 transition-all duration-300 transform hover:scale-105 group"
-              >
-                <CardContent className="p-0">
-                  <div className="relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <Image
-                      src={cap.src || "/placeholder.svg"}
-                      alt={cap.name}
-                      width={400}
-                      height={400}
-                      className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{cap.name}</h3>
-                    <p className="text-blue-400 font-semibold">{cap.style}</p>
-                  </div>
-                </CardContent>
-              </Card>
+              <CapCard key={index} src={cap.src} name={cap.name} style={cap.style} />
             ))}
           </div>
         </div>
