@@ -9,7 +9,7 @@ export interface CapCardProps {
 
 export function CapCard({ src, name, style }: CapCardProps) {
   return (
-    <Card className="w-80 bg-gray-900 border-blue-500/30 hover:border-blue-500 transition-all duration-300 transform hover:scale-105 group">
+    <Card className="w-full max-w-xs bg-gray-900 border-blue-500/30 hover:border-blue-500 transition-all duration-300 transform hover:scale-105 group mx-auto">
       <CardContent className="p-0">
         <div className="relative overflow-hidden flex justify-center items-center" style={{height: '200px'}}>
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -24,7 +24,7 @@ export function CapCard({ src, name, style }: CapCardProps) {
         </div>
         <div className="p-6">
           <h3 className="text-2xl font-bold text-white mb-2 font-title">{name}</h3>
-          <p className="text-blue-400 font-semibold font-deardorf">{style}</p>
+          <p className="text-blue-400 font-semibold font-deardorf text-2xl">{style}</p>
         </div>
       </CardContent>
     </Card>

@@ -41,7 +41,7 @@ export default function ProcessPage() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-600">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-7xl font-black text-white mb-6 tracking-wider font-title">COME FUNZIONA</h1>
-          <p className="text-xl text-white font-semibold font-deardorf">DAL BOZZETTO ALLA FIAMMA</p>
+          <p className="text-3xl text-white font-semibold font-deardorf">DAL BOZZETTO ALLA FIAMMA</p>
         </div>
       </section>
 
@@ -53,7 +53,7 @@ export default function ProcessPage() {
               Il Mio Metodo di Creazione
             </span>
           </h2>
-          <p className="text-lg text-gray-300 leading-relaxed font-deardorf">
+          <p className="text-2xl text-gray-300 leading-relaxed font-deardorf">
             Ogni cappello personalizzato nasce da un processo creativo unico che combina la tua visione con la mia
             esperienza artigianale. Dalla prima idea al prodotto finito, ogni fase è curata nei minimi dettagli per
             garantire un risultato eccezionale.
@@ -91,8 +91,8 @@ export default function ProcessPage() {
                 <div className="flex-1">
                   <Card className="bg-gray-900 border-blue-500/30 hover:border-blue-500 transition-all duration-300">
                     <CardContent className="p-8">
-                      <h3 className="text-3xl font-black text-white mb-4 font-deardorf">{step.title}</h3>
-                      <p className="text-lg text-gray-300 leading-relaxed font-deardorf">{step.description}</p>
+                      <h3 className="text-5xl font-black text-white mb-4 font-deardorf">{step.title}</h3>
+                      <p className="text-3xl text-gray-300 leading-relaxed font-deardorf">{step.description}</p>
                     </CardContent>
                   </Card>
                 </div>
@@ -105,10 +105,11 @@ export default function ProcessPage() {
       {/* CTA Banner */}
       <section style={{ backgroundColor: "rgb(15, 58, 175)" }} className="py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-6 font-jakarta">INIZIA OGGI IL TUO</h2>
-          <p className="text-2xl text-white mb-8 font-semibold font-deardorf">CAPPELLO PERSONALIZZATO</p>
+          <h2 className="text-4xl md:text-6xl font-black text-white mb-6 font-jakarta">
+            INIZIA OGGI IL TUO CAPPELLO PERSONALIZZATO
+          </h2>
           <Link href="/contact">
-            <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold px-12 py-6 text-xl tracking-wide shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105 font-deardorf">
+            <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold px-12 py-6 text-3xl tracking-wide shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105 font-deardorf">
               DRIP NOW!
             </Button>
           </Link>

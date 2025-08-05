@@ -1,13 +1,13 @@
 @font-face {
-  font-family: 'Deardorf Drip Demo';
-  src: url('../fonts/deardorf-demo/Deardorf Drip Demo.otf') format('opentype');
+  font-family: 'Deardorf Demo';
+  src: url('../fonts/deardorf-demo/Deardorf Demo.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 :root {
   --font-title-jakarta: 'JAKARTA', sans-serif;
-  --font-body-deardorf: 'Deardorf Drip Demo', sans-serif;
+  --font-body-deardorf: 'Deardorf Demo', sans-serif;
 }
 
 .font-jakarta {

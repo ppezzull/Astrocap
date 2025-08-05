@@ -11,30 +11,30 @@ export default function Header() {
   const [language, setLanguage] = useState("it")
 
   return (
-    <header className="sticky top-0 z-50 bg-black/90 backdrop-blur-sm border-b border-blue-500/20">
+    <header className="sticky top-0 z-50 bg-black/50 backdrop-blur-sm border-b border-blue-500/20">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center transition-transform duration-300 transform hover:scale-110">
-          <Image src="/images/logo.png" alt="AstroCap Logo" width={240} height={240} className="h-16 w-auto" />
+          <Image src="/images/logo.png" alt="AstroCap Logo" width={180} height={180} className="h-14 w-auto" />
         </Link>
 
         {/* Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <Link
             href="/caps"
-            className="text-white hover:text-blue-400 transition-colors font-bold text-lg tracking-wide font-deardorf"
+            className="text-white hover:text-blue-400 transition-colors font-bold text-2xl tracking-wide font-deardorf"
           >
             CAPS
           </Link>
           <Link
             href="/process"
-            className="text-white hover:text-blue-400 transition-colors font-bold text-lg tracking-wide font-deardorf"
+            className="text-white hover:text-blue-400 transition-colors font-bold text-2xl tracking-wide font-deardorf"
           >
             PROCESS
           </Link>
           <Link
             href="/contact"
-            className="text-white hover:text-blue-400 transition-colors font-bold text-lg tracking-wide font-deardorf"
+            className="text-white hover:text-blue-400 transition-colors font-bold text-2xl tracking-wide font-deardorf"
           >
             CONTACT
           </Link>
@@ -62,7 +62,7 @@ export default function Header() {
 
           {/* CTA Button */}
           <Link href="/contact">
-            <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold px-6 py-2 text-lg tracking-wide shadow-lg hover:shadow-blue-500/25 transition-all duration-300 font-deardorf">
+            <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold px-6 py-2 text-2xl tracking-wide shadow-lg hover:shadow-blue-500/25 transition-all duration-300 font-deardorf">
               DRIP NOW!
             </Button>
           </Link>

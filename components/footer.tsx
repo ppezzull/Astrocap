@@ -8,20 +8,20 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           {/* Copyright */}
-          <p className="text-center md:text-left font-bold font-deardorf">Crafted with fire and style — AstroCap © 2025</p>
+          <p className="text-center md:text-left font-bold font-deardorf text-2xl">Crafted with fire and style — AstroCap © 2025</p>
 
           {/* Navigation Links */}
           <nav className="flex space-x-6">
-            <Link href="/" className="hover:text-blue-400 transition-colors font-deardorf">
+            <Link href="/" className="hover:text-blue-400 transition-colors font-deardorf text-2xl">
               HOME
             </Link>
-            <Link href="/caps" className="hover:text-blue-400 transition-colors font-deardorf">
+            <Link href="/caps" className="hover:text-blue-400 transition-colors font-deardorf text-2xl">
               CAPS
             </Link>
-            <Link href="/process" className="hover:text-blue-400 transition-colors font-deardorf">
+            <Link href="/process" className="hover:text-blue-400 transition-colors font-deardorf text-2xl">
               PROCESS
             </Link>
-            <Link href="/contact" className="hover:text-blue-400 transition-colors font-deardorf">
+            <Link href="/contact" className="hover:text-blue-400 transition-colors font-deardorf text-2xl">
               CONTACT
             </Link>
           </nav>
