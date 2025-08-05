@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 
 export default function ProcessCtaSection() {
   return (
-    <section style={{ backgroundColor: "rgb(15, 58, 175)" }} className="py-20">
+    <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-600">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-4xl md:text-6xl font-black text-white mb-6 font-jakarta">
           INIZIA OGGI IL TUO CAPPELLO PERSONALIZZATO

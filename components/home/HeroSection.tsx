@@ -23,7 +23,7 @@ export default function HeroSection() {
           <div className="absolute inset-0 bg-gradient-to-t from-blue-600/30 via-blue-500/20 to-transparent rounded-3xl blur-3xl" />
 
           <div className="relative bg-black/50 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-blue-500/30">
-            <h1 className="text-4xl md:text-7xl font-black mb-6 tracking-wider font-title">
+            <h1 className="text-4xl md:text-7xl font-black mb-6 tracking-wider font-jakarta">
               <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
                 CAPPELLI PERSONALIZZATI
               </span>

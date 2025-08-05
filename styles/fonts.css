@@ -5,17 +5,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Jakarta';
+  src: url('../fonts/jak-arta/JAK\ ARTA.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
-  --font-title-jakarta: 'JAKARTA', sans-serif;
+  --font-jakarta-jakarta: 'Jakarta', sans-serif;
   --font-body-deardorf: 'Deardorf Demo', sans-serif;
 }
 
 .font-jakarta {
-  font-family: var(--font-title-jakarta), sans-serif;
-}
-
-.font-title {
-  font-family: var(--font-title-jakarta), sans-serif;
+  font-family: var(--font-jakarta-jakarta), sans-serif;
 }
 
 .font-deardorf {

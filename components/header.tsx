@@ -12,7 +12,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-black/50 backdrop-blur-sm border-b border-blue-500/20">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+      <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center transition-transform duration-300 transform hover:scale-110">
           <Image src="/images/logo.png" alt="AstroCap Logo" width={180} height={180} className="h-14 w-auto" />

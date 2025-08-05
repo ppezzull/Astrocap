@@ -34,10 +34,7 @@ export default function ContactInfo() {
             </span>
           </h3>
           <div className="space-y-4">
-            <a
-              href="#"
-              className="flex items-center space-x-4 text-white hover:text-blue-400 transition-colors"
-            >
+            <a href="https://www.instagram.com/astrocapmerch" className="flex items-center space-x-4 text-white hover:text-blue-400 transition-colors">
               <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-3 rounded-full">
                 <Instagram className="h-6 w-6" />
               </div>
