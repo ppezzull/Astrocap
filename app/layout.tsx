@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="it" className={jakarta.variable}>
-      <body className="bg-black">
+      <body className="bg-black font-deardorf">
         <Header />
         <main>{children}</main>
         <Footer />

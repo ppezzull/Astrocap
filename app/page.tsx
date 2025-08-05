@@ -46,12 +46,12 @@ export default function HomePage() {
                 <span className="text-white">CON BRILLANTINI</span>
               </h1>
 
-              <p className="text-xl md:text-2xl mb-8 text-blue-200 font-semibold">
+              <p className="text-xl md:text-2xl mb-8 text-blue-200 font-semibold font-deardorf">
                 Ogni cappello racconta la tua storia, con fiamme e stile.
               </p>
 
               <Link href="/caps">
-                <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold px-8 py-4 text-xl tracking-wide shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105">
+                <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold px-8 py-4 text-xl tracking-wide shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105 font-deardorf">
                   SCOPRI I CAPPELLI
                 </Button>
               </Link>
@@ -70,11 +70,11 @@ export default function HomePage() {
                   CHI SONO
                 </span>
               </h2>
-              <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+              <p className="text-lg text-gray-300 mb-6 leading-relaxed font-deardorf">
                 Sono un artista specializzato nella personalizzazione di cappelli con cristalli e brillantini. Ogni
                 pezzo è unico, creato a mano con passione e dedizione per lo stile streetwear.
               </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-300 leading-relaxed font-deardorf">
                 La mia missione è trasformare cappelli ordinari in opere d'arte che riflettono la personalità e lo stile
                 di chi li indossa. Fiamme, cristalli e design audaci sono la mia firma.
               </p>
@@ -136,15 +136,15 @@ export default function HomePage() {
                     <step.icon className="h-10 w-10 text-white" />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{step.title}</h3>
-                <p className="text-gray-300">{step.desc}</p>
+                <h3 className="text-2xl font-bold text-white mb-4 font-deardorf">{step.title}</h3>
+                <p className="text-gray-300 font-deardorf">{step.desc}</p>
               </div>
             ))}
           </div>
 
           <div className="text-center">
             <Link href="/process">
-              <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold px-8 py-4 text-lg">
+              <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold px-8 py-4 text-lg font-deardorf">
                 SCOPRI IL PROCESSO COMPLETO
               </Button>
             </Link>
@@ -156,9 +156,9 @@ export default function HomePage() {
       <section className="py-20 bg-gradient-to-r from-blue-600 via-blue-600 to-blue-600">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-6xl font-black text-white mb-6 font-jakarta">PROPONI LA TUA IDEA</h2>
-          <p className="text-2xl text-white mb-8 font-semibold">Rendila realtà.</p>
+          <p className="text-2xl text-white mb-8 font-semibold font-deardorf">Rendila realtà.</p>
           <Link href="/contact">
-            <Button className="bg-black hover:bg-gray-900 text-white font-bold px-12 py-6 text-xl tracking-wide shadow-2xl hover:shadow-black/50 transition-all duration-300 transform hover:scale-105">
+            <Button className="bg-black hover:bg-gray-900 text-white font-bold px-12 py-6 text-xl tracking-wide shadow-2xl hover:shadow-black/50 transition-all duration-300 transform hover:scale-105 font-deardorf">
               DRIP NOW!
             </Button>
           </Link>

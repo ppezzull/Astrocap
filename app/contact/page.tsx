@@ -24,7 +24,7 @@ export default function ContactPage() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-600">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-7xl font-black text-white mb-6 tracking-wider font-title">CONTATTI</h1>
-          <p className="text-xl text-white font-semibold">INIZIA IL TUO PROGETTO PERSONALIZZATO</p>
+          <p className="text-xl text-white font-semibold font-deardorf">INIZIA IL TUO PROGETTO PERSONALIZZATO</p>
         </div>
       </section>
 
@@ -34,7 +34,7 @@ export default function ContactPage() {
             {/* Contact Form */}
             <Card className="bg-gray-900 border-blue-500/30">
               <CardHeader>
-                <CardTitle className="text-3xl font-black text-white">
+                <CardTitle className="text-3xl font-black text-white font-jakarta">
                   <span className="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">
                     INVIA LA TUA RICHIESTA
                   </span>
@@ -43,7 +43,7 @@ export default function ContactPage() {
               <CardContent>
                 <form action={formAction} className="space-y-6">
                   <div>
-                    <Label htmlFor="nome" className="text-white font-semibold">
+                    <Label htmlFor="nome" className="text-white font-semibold font-deardorf">
                       Nome *
                     </Label>
                     <Input
@@ -56,7 +56,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <Label htmlFor="email" className="text-white font-semibold">
+                    <Label htmlFor="email" className="text-white font-semibold font-deardorf">
                       Email *
                     </Label>
                     <Input
@@ -70,7 +70,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <Label htmlFor="messaggio" className="text-white font-semibold">
+                    <Label htmlFor="messaggio" className="text-white font-semibold font-deardorf">
                       Messaggio *
                     </Label>
                     <Textarea
@@ -84,7 +84,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <Label htmlFor="files" className="text-white font-semibold">File Upload (Opzionale)</Label>
+                    <Label htmlFor="files" className="text-white font-semibold font-deardorf">File Upload (Opzionale)</Label>
                     <Input id="files" name="files" type="file" accept="image/png,image/jpeg" multiple className="bg-black border-blue-500/50 text-white focus:border-blue-500" />
                   </div>
 
@@ -94,7 +94,7 @@ export default function ContactPage() {
                   )}
                   <Button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-4 text-lg tracking-wide"
+                    className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-4 text-lg tracking-wide font-deardorf"
                   >
                     INVIA RICHIESTA
                   </Button>
@@ -107,7 +107,7 @@ export default function ContactPage() {
               {/* Direct Email */}
               <Card className="bg-gray-900 border-blue-500/30">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-white mb-4">
+                  <h3 className="text-2xl font-bold text-white mb-4 font-jakarta">
                     <span className="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">
                       CONTATTO DIRETTO
                     </span>
@@ -115,8 +115,8 @@ export default function ContactPage() {
                   <div className="flex items-center space-x-4">
                     <Mail className="h-8 w-8 text-blue-400" />
                     <div>
-                      <p className="text-white font-semibold">Email</p>
-                      <a href="mailto:info@astrocap.com" className="text-blue-400 hover:text-blue-300">
+                      <p className="text-white font-semibold font-deardorf">Email</p>
+                      <a href="mailto:info@astrocap.com" className="text-blue-400 hover:text-blue-300 font-deardorf">
                         info@astrocap.com
                       </a>
                     </div>
@@ -127,7 +127,7 @@ export default function ContactPage() {
               {/* Social Media */}
               <Card className="bg-gray-900 border-blue-500/30">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-white mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-6 font-jakarta">
                     <span className="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">
                       SEGUIMI SUI SOCIAL
                     </span>
@@ -141,8 +141,8 @@ export default function ContactPage() {
                         <Instagram className="h-6 w-6" />
                       </div>
                       <div>
-                        <p className="font-semibold">Instagram</p>
-                        <p className="text-gray-400">@astrocap_official</p>
+                        <p className="font-semibold font-deardorf">Instagram</p>
+                        <p className="text-gray-400 font-deardorf">@astrocap_official</p>
                       </div>
                     </a>
 
@@ -156,8 +156,8 @@ export default function ContactPage() {
                         
                       </div>
                       <div>
-                        <p className="font-semibold">TikTok</p>
-                        <p className="text-gray-400">@astrocap_drip</p>
+                        <p className="font-semibold font-deardorf">TikTok</p>
+                        <p className="text-gray-400 font-deardorf">@astrocap_drip</p>
                       </div>
                     </a>
                   </div>
@@ -167,8 +167,8 @@ export default function ContactPage() {
               {/* Response Time */}
               <Card className="bg-gray-900 border-blue-500/50">
                 <CardContent className="p-8 text-center">
-                  <h3 className="text-xl font-bold text-white mb-2">TEMPO DI RISPOSTA</h3>
-                  <p className="text-blue-200">
+                  <h3 className="text-xl font-bold text-white mb-2 font-jakarta">TEMPO DI RISPOSTA</h3>
+                  <p className="text-blue-200 font-deardorf">
                     Rispondo entro 24 ore per iniziare subito il tuo progetto personalizzato!
                   </p>
                 </CardContent>

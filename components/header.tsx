@@ -22,19 +22,19 @@ export default function Header() {
         <nav className="hidden md:flex items-center space-x-8">
           <Link
             href="/caps"
-            className="text-white hover:text-blue-400 transition-colors font-bold text-lg tracking-wide"
+            className="text-white hover:text-blue-400 transition-colors font-bold text-lg tracking-wide font-deardorf"
           >
             CAPS
           </Link>
           <Link
             href="/process"
-            className="text-white hover:text-blue-400 transition-colors font-bold text-lg tracking-wide"
+            className="text-white hover:text-blue-400 transition-colors font-bold text-lg tracking-wide font-deardorf"
           >
             PROCESS
           </Link>
           <Link
             href="/contact"
-            className="text-white hover:text-blue-400 transition-colors font-bold text-lg tracking-wide"
+            className="text-white hover:text-blue-400 transition-colors font-bold text-lg tracking-wide font-deardorf"
           >
             CONTACT
           </Link>
@@ -62,7 +62,7 @@ export default function Header() {
 
           {/* CTA Button */}
           <Link href="/contact">
-            <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold px-6 py-2 text-lg tracking-wide shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
+            <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold px-6 py-2 text-lg tracking-wide shadow-lg hover:shadow-blue-500/25 transition-all duration-300 font-deardorf">
               DRIP NOW!
             </Button>
           </Link>
