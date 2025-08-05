@@ -23,7 +23,7 @@ export default function ContactPage() {
       {/* Header */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-600">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-black text-white mb-6 tracking-wider">CONTATTI</h1>
+          <h1 className="text-5xl md:text-7xl font-black text-white mb-6 tracking-wider font-title">CONTATTI</h1>
           <p className="text-xl text-white font-semibold">INIZIA IL TUO PROGETTO PERSONALIZZATO</p>
         </div>
       </section>

@@ -14,7 +14,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-black/90 backdrop-blur-sm border-b border-blue-500/20">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center transition-transform duration-300 transform hover:scale-110">
           <Image src="/images/logo.png" alt="AstroCap Logo" width={240} height={240} className="h-16 w-auto" />
         </Link>
 

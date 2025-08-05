@@ -1,7 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { jakarta } from "@/app/fonts"
-import "./globals.css"
+import "@/styles/globals.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 

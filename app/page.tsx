@@ -5,6 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { CapCard } from "@/components/CapCard"
 import { Palette, Flame, Crown } from "lucide-react"
 
 export default function HomePage() {
@@ -37,7 +38,7 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-t from-blue-600/30 via-blue-500/20 to-transparent rounded-3xl blur-3xl" />
 
             <div className="relative bg-black/50 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-blue-500/30">
-              <h1 className="text-4xl md:text-7xl font-black mb-6 tracking-wider">
+              <h1 className="text-4xl md:text-7xl font-black mb-6 tracking-wider font-title">
                 <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
                   CAPPELLI PERSONALIZZATI
                 </span>
@@ -101,31 +102,13 @@ export default function HomePage() {
             </span>
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="flex flex-wrap justify-center gap-8">
             {[
               { src: "/images/caps/cap1.png", name: "Fiamma Nera", style: "NY Flames" },
               { src: "/images/caps/cap2.png", name: "Crystal Blue", style: "Texas Rangers" },
               { src: "/images/caps/cap4.png", name: "Ocean Storm", style: "White Sox" },
             ].map((cap, index) => (
-              <Card
-                key={index}
-                className="bg-black/50 border-blue-500/30 hover:border-blue-500 transition-all duration-300 transform hover:scale-105"
-              >
-                <CardContent className="p-6">
-                  <div className="relative mb-4">
-                    <div className="absolute inset-0 bg-gradient-to-t from-blue-500/20 to-transparent rounded-lg" />
-                    <Image
-                      src={cap.src || "/placeholder.svg"}
-                      alt={cap.name}
-                      width={300}
-                      height={300}
-                      className="w-full h-64 object-cover rounded-lg"
-                    />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{cap.name}</h3>
-                  <p className="text-blue-300">{cap.style}</p>
-                </CardContent>
-              </Card>
+              <CapCard key={index} src={cap.src} name={cap.name} style={cap.style} />
             ))}
           </div>
         </div>

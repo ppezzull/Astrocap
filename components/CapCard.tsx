@@ -9,7 +9,7 @@ export interface CapCardProps {
 
 export function CapCard({ src, name, style }: CapCardProps) {
   return (
-    <Card className="bg-gray-900 border-blue-500/30 hover:border-blue-500 transition-all duration-300 transform hover:scale-105 group">
+    <Card className="w-80 bg-gray-900 border-blue-500/30 hover:border-blue-500 transition-all duration-300 transform hover:scale-105 group">
       <CardContent className="p-0">
         <div className="relative overflow-hidden flex justify-center items-center" style={{height: '200px'}}>
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
