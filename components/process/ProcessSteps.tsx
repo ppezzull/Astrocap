@@ -9,7 +9,6 @@ export default function ProcessSteps() {
         <Step
           key={1}
           description="Condividi la tua visione, i colori preferiti, lo stile che desideri. Ogni dettaglio conta per creare il cappello perfetto."
-          number={1}
         />
       )
     },
@@ -19,7 +18,6 @@ export default function ProcessSteps() {
         <Step
           key={2}
           description="Trasformo la tua idea in un design dettagliato, scegliendo cristalli, posizioni e effetti per massimizzare l'impatto visivo."
-          number={2}
         />
       )
     },
@@ -29,7 +27,6 @@ export default function ProcessSteps() {
         <Step
           key={3}
           description="Con precisione artigianale, applico ogni cristallo e dettaglio a mano, creando un pezzo unico che rispecchia la tua personalità."
-          number={3}
         />
       )
     },
@@ -38,8 +35,7 @@ export default function ProcessSteps() {
       content: (
         <Step
           key={4}
-          description="Il tuo cappello personalizzato è pronto! Un'opera d'arte indossabile che cattura l'attenzione e racconta la tua storia."
-          number={4}
+          description={`Il tuo cappello personalizzato è pronto!\n Un'opera d'arte indossabile che cattura l'attenzione e racconta la tua storia.`}
         />
       )
     }

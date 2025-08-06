@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import "@/styles/globals.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
-
+import { Toaster } from "@/components/ui/toaster"; // or "@/components/ui/toaster" if that's your implementation
 
 export const metadata: Metadata = {
   title: "AstroCap - Cappelli Personalizzati con Brillantini",
@@ -21,6 +21,7 @@ export default function RootLayout({
       <body className="bg-black font-deardorf">
         <Header />
         <main>{children}</main>
+        <Toaster />
         <Footer />
       </body>
     </html>

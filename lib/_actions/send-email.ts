@@ -56,6 +56,19 @@ export async function sendEmail(_prevState: ContactState | undefined, formData: 
     }
   }
 
+  // Check total attachments size (10MB = 10 * 1024 * 1024 bytes)
+  const totalAttachmentSize = attachments.reduce((sum, att) => sum + att.size, 0);
+  if (totalAttachmentSize > 10 * 1024 * 1024) {
+    return {
+      status: "error",
+      errors: {
+        general: [
+          "Il totale degli allegati supera i 10MB. Riduci la dimensione o il numero dei file allegati e riprova."
+        ],
+      },
+    };
+  }
+
   // Build data object for validation
   const dataForValidation = {
     nome: raw.nome,

@@ -1,4 +1,7 @@
-import { useActionState } from "react";
+"use client";
+
+import React, { useActionState } from "react";
+import { toast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -13,6 +16,26 @@ const initialState: ContactState | undefined = undefined;
 
 export default function ContactForm() {
   const [state, formAction] = useActionState(sendEmail, initialState);
+
+  // Show toast on status change
+  React.useEffect(() => {
+    if (state) {
+      console.log("TOAST", state);
+    }
+    if (state?.status === "success") {
+      toast({
+        title: "Messaggio inviato con successo!",
+        description: "Grazie per averci contattato. Ti risponderemo al più presto.",
+        variant: "default"
+      });
+    } else if (state?.status === "error") {
+      toast({
+        title: "Errore nell'invio",
+        description: "Errore nell'invio. Riprova o scrivimi direttamente!",
+        variant: "destructive"
+      });
+    }
+  }, [state]);
 
   // State for image previews and files
   const [filePreviews, setFilePreviews] = useState<string[]>([]);
@@ -63,7 +86,25 @@ export default function ContactForm() {
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <form action={formAction} className="space-y-6">
+        <form
+          action={async (formData) => {
+            // Calculate total file size
+            const fileInputs = files.filter(Boolean) as File[];
+            const totalSize = fileInputs.reduce((sum, f) => sum + f.size, 0);
+            if (totalSize > 10 * 1024 * 1024) {
+              toast({
+                title: "Allegati troppo grandi",
+                description: "Il totale degli allegati supera i 10MB. Riduci la dimensione o il numero dei file allegati e riprova.",
+                variant: "destructive"
+              });
+              return;
+            }
+            // If under limit, submit as usual
+            // @ts-ignore
+            formAction(formData);
+          }}
+          className="space-y-6"
+        >
           <div>
             <Label
               htmlFor="nome"
@@ -123,15 +164,6 @@ export default function ContactForm() {
             onRemove={handleRemove}
             maxImages={maxImages}
           />
-
-          {state?.status === "success" && (
-            <p className="text-green-500">Messaggio inviato con successo!</p>
-          )}
-          {state?.status === "error" && (
-            <p className="text-red-500">
-              Errore nell'invio. Riprova o scrivimi direttamente!
-            </p>
-          )}
 
           <Button
             type="submit"

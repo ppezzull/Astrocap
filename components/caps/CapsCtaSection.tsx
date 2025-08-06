@@ -5,7 +5,7 @@ export default function CapsCtaSection() {
   return (
     <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-600">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-4xl md:text-6xl font-black text-white mb-6 font-jakarta">HAI UN'IDEA UNICA?</h2>
+        <h2 className="text-4xl md:text-6xl font-black text-white mb-6 font-jakarta">REALIZZA LA TUA IDEA</h2>
         <p className="text-4xl text-white mb-8 font-semibold font-deardorf">
           Ogni cappello può diventare un'opera d'arte personalizzata
         </p>
