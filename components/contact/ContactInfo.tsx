@@ -40,12 +40,12 @@ export default function ContactInfo() {
               </div>
               <div>
                 <p className="font-semibold font-deardorf text-2xl">Instagram</p>
-                <p className="text-gray-400 font-deardorf text-2xl">@astrocap_official</p>
+                <p className="text-gray-400 font-deardorf text-2xl">@astrocapmerch</p>
               </div>
             </a>
 
             <a
-              href="#"
+              // href="#"
               className="flex items-center space-x-4 text-white hover:text-blue-400 transition-colors"
             >
               <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-3 rounded-full">
@@ -53,7 +53,7 @@ export default function ContactInfo() {
               </div>
               <div>
                 <p className="font-semibold font-deardorf text-2xl">TikTok</p>
-                <p className="text-gray-400 font-deardorf text-2xl">@astrocap_drip</p>
+                <p className="text-gray-400 font-deardorf text-2xl">Coming soon</p>
               </div>
             </a>
           </div>

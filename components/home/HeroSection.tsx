@@ -17,18 +17,15 @@ export default function HeroSection() {
       />
 
       {/* Hero Content */}
-      <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto">
         <div className="relative">
           {/* Flame background effect */}
-          <div className="absolute inset-0 bg-gradient-to-t from-blue-600/30 via-blue-500/20 to-transparent rounded-3xl blur-3xl" />
-
           <div className="relative bg-black/50 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-blue-500/30">
             <h1 className="text-4xl md:text-7xl font-black mb-6 tracking-wider font-jakarta">
-              <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
-                CAPPELLI PERSONALIZZATI
+              <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent border-white">
+                CAPPELLI PERSONALIZZATI CON BRILLANTINI
               </span>
               <br />
-              <span className="text-white">CON BRILLANTINI</span>
             </h1>
 
             <p className="text-3xl md:text-4xl mb-8 text-blue-200 font-semibold font-deardorf">

@@ -33,7 +33,7 @@ export default function Footer() {
               className="hover:text-blue-400 transition-colors">
               <Instagram className="h-6 w-6" />
             </a>
-            <a href="#" className="hover:text-blue-400 transition-colors">
+            <a className="hover:text-blue-400 transition-colors">
               <SiTiktok className="h-6 w-6" />
             </a>
             <a href="mailto:AstroCapMerch@gmail.com" className="hover:text-blue-400 transition-colors">
