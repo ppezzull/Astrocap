@@ -14,8 +14,8 @@ const caps = [
 export default function CapsGallery() {
   return (
     <section className="py-20">
-      <div className="w-[90%] mx-auto flex justify-center">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full max-w-screen-2xl items-stretch">
+      <div className="w-full px-4 mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full max-w-screen-2xl items-stretch mx-auto">
           {caps.map((cap, index) => (
             <CapCard key={index} src={cap.src} name={cap.name} style={cap.style} />
           ))}

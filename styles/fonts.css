@@ -19,8 +19,10 @@
 
 .font-jakarta {
   font-family: var(--font-jakarta-jakarta), sans-serif;
+  letter-spacing: 0.18em;
 }
 
 .font-deardorf {
   font-family: var(--font-body-deardorf), sans-serif;
+  letter-spacing: 0.06em;
 }

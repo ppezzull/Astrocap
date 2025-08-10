@@ -17,8 +17,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="it">
-      <body className="bg-black font-deardorf">
+    <html lang="it" className="overflow-x-hidden">
+      <body className="bg-black font-deardorf overflow-x-hidden">
         <Header />
         <main>{children}</main>
         <Toaster />
