@@ -2,8 +2,8 @@ import CapsGallery from "@/components/caps/CapsGallery"
 import CapsCtaSection from "@/components/caps/CapsCtaSection"
 import { getDictionary } from "@/lib/i18n"
 
-export default async function CapsPage(props: { params: Promise<{ locale: string }> }) {
-  const { locale } = await props.params
+export default async function CapsPage(props: { params: { locale: string } }) {
+  const { locale } = props.params
   const dict = await getDictionary(locale as any)
   return (
     <div className="min-h-screen bg-black">

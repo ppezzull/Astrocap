@@ -1,5 +1,6 @@
 import type React from "react"
 import "@/styles/globals.css"
+import { locales } from "@/lib/i18n/locales"
 
 export default function LocaleLayout({
   children,
@@ -7,5 +8,9 @@ export default function LocaleLayout({
   children: React.ReactNode
 }) {
   return <>{children}</>
+}
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }))
 }
 

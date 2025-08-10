@@ -3,8 +3,8 @@ import ProcessSteps from "@/components/process/ProcessSteps"
 import ProcessCtaSection from "@/components/process/ProcessCtaSection"
 import { getDictionary } from "@/lib/i18n"
 
-export default async function ProcessPage(props: { params: Promise<{ locale: string }> }) {
-  const { locale } = await props.params
+export default async function ProcessPage(props: { params: { locale: string } }) {
+  const { locale } = props.params
   const dict = await getDictionary(locale as any)
   return (
     <div className="min-h-screen bg-black">
