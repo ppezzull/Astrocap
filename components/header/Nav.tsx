@@ -1,26 +1,32 @@
 import Link from "next/link"
 
-export function HeaderNav() {
+export function HeaderNav({
+  locale = "it",
+  labels = { caps: "CAPS", process: "PROCESS", contact: "CONTACT" },
+}: {
+  locale?: string
+  labels?: { caps: string; process: string; contact: string }
+}) {
   return (
     <>
       <Link
-        href="/caps"
+        href={`/${locale}/caps`}
         className="text-white hover:text-blue-400 transition-colors font-bold text-2xl tracking-wide font-deardorf"
       >
-        CAPS
+        {labels.caps}
       </Link>
       <Link
-        href="/process"
+        href={`/${locale}/process`}
         className="text-white hover:text-blue-400 transition-colors font-bold text-2xl tracking-wide font-deardorf"
       >
-        PROCESS
+        {labels.process}
       </Link>
       <Link
-        href="/contact"
+        href={`/${locale}/contact`}
         className="text-white hover:text-blue-400 transition-colors font-bold text-2xl tracking-wide font-deardorf"
       >
-        CONTACT
+        {labels.contact}
       </Link>
     </>
   )
-} 
+}

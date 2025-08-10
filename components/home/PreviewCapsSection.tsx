@@ -1,13 +1,11 @@
 import { CapCard } from "@/components/CapCard"
 
-export default function PreviewCapsSection() {
+export default function PreviewCapsSection({ heading }: { heading?: string }) {
   return (
     <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-600">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-black text-center text-white mb-12">
-          <span className="bg-gradient-to-r font-jakarta from-white to-white bg-clip-text text-transparent">
-            ANTEPRIMA CAPPELLI
-          </span>
+          <span className="bg-gradient-to-r font-jakarta from-white to-white bg-clip-text text-transparent">{heading ?? "ANTEPRIMA CAPPELLI"}</span>
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">

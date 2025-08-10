@@ -3,6 +3,9 @@
 import Image from "next/image"
 import { BackgroundGradient } from "@/components/ui/background-gradient"
 import { CardContent } from "./ui/card"
+import { usePathname } from "next/navigation"
+import { locales } from "@/lib/i18n/locales"
+import { getDictionary } from "@/lib/i18n"
 
 export interface CapCardProps {
   src: string
@@ -11,6 +14,12 @@ export interface CapCardProps {
 }
 
 export function CapCard({ src, name, style }: CapCardProps) {
+  const pathname = usePathname()
+  const seg = (pathname?.split("/")[1] || "it")
+  const locale = locales.includes(seg as any) ? (seg as any) : "it"
+  // reserved for future localized labels/aria
+  // const [dict, setDict] = React.useState<any>(null)
+  // React.useEffect(() => { getDictionary(locale).then(setDict) }, [locale])
   return (
     <div className="w-full max-w-lg mx-auto h-full group hover:scale-105 transition-all duration-300">
       <CardContent className="p-0">

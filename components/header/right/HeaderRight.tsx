@@ -4,7 +4,7 @@ import { useIsMobile } from "@/hooks/use-mobile"
 import { LanguageSelector } from "../LanguageSelector"
 import { HeaderCtaButton } from "../CtaButton"
 
-export function HeaderRight() {
+export function HeaderRight({ ctaLabel }: { ctaLabel?: string }) {
   const isMobile = useIsMobile()
 
   return (
@@ -12,12 +12,12 @@ export function HeaderRight() {
       {isMobile ? (
         <div className="flex items-center gap-2">
           <LanguageSelector />
-          <HeaderCtaButton compact />
+          <HeaderCtaButton compact label={ctaLabel} />
         </div>
       ) : (
         <div className="flex items-center gap-4">
           <LanguageSelector />
-          <HeaderCtaButton />
+          <HeaderCtaButton label={ctaLabel} />
         </div>
       )}
     </div>
