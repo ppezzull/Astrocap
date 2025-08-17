@@ -6,7 +6,9 @@ import CtaSection from "@/components/home/CtaSection"
 import { getDictionary } from "@/lib/i18n"
 
 export default async function HomePage(props: { params: { locale: string } }) {
-  const { locale } = props.params
+  // Next.js 15 requires awaiting props.params before accessing properties
+  const params = await props.params
+  const { locale } = params
   const dict = await getDictionary(locale as any)
   return (
     <div className="min-h-screen">
