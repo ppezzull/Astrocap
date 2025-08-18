@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Mail } from "lucide-react"
-import { SiInstagram, SiTiktok } from "react-icons/si"
+import { SiInstagram } from "react-icons/si"
+import { RiTiktokLine } from "react-icons/ri";
 import type { Dictionary } from "@/lib/i18n"
 
 export default function ContactInfo({ dict }: { dict: Dictionary }) {
@@ -43,7 +44,7 @@ export default function ContactInfo({ dict }: { dict: Dictionary }) {
 
             <a className="flex items-center space-x-4 text-white hover:text-blue-400 transition-colors">
               <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-3 rounded-full">
-                <SiTiktok className="h-6 w-6" />
+                <RiTiktokLine className="h-7 w-7" />
               </div>
               <div>
                 <p className="font-semibold font-deardorf text-2xl">{dict.contactPage.info.tiktok ?? "TikTok"}</p>

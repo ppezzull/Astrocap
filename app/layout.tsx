@@ -1,7 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
 import "@/styles/globals.css"
-import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Toaster } from "@/components/ui/toaster"; // or "@/components/ui/toaster" if that's your implementation
 
@@ -19,7 +18,6 @@ export default function RootLayout({
   return (
     <html lang="it" className="overflow-x-hidden">
       <body className="bg-black font-deardorf overflow-x-hidden">
-        <Header />
         <main>{children}</main>
         <Toaster />
         <Footer />

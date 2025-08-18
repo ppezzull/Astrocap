@@ -36,6 +36,7 @@ export function LanguageSelector() {
         <SelectItem value="it" className="text-white">🇮🇹</SelectItem>
         <SelectItem value="en" className="text-white">🇬🇧</SelectItem>
         <SelectItem value="fil" className="text-white">🇵🇭</SelectItem>
+        <SelectItem value="es" className="text-white">🇪🇸</SelectItem>
       </SelectContent>
     </Select>
   )

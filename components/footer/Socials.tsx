@@ -1,5 +1,7 @@
-import { Instagram, Mail } from "lucide-react"
-import { SiTiktok } from "react-icons/si"
+import { SiInstagram } from "react-icons/si"
+import { RiTiktokLine } from "react-icons/ri";
+import { Mail } from "lucide-react"
+
 
 export function FooterSocials() {
   return (
@@ -8,13 +10,13 @@ export function FooterSocials() {
         href="https://www.instagram.com/astrocapmerch"
         className="hover:text-blue-400 transition-colors"
       >
-        <Instagram className="h-6 w-6" />
+        <SiInstagram className="h-6 w-6" />
       </a>
       <a className="hover:text-blue-400 transition-colors">
-        <SiTiktok className="h-6 w-6" />
+        <RiTiktokLine className="h-7 w-7" />
       </a>
       <a href="mailto:AstroCapMerch@gmail.com" className="hover:text-blue-400 transition-colors">
-        <Mail className="h-6 w-6" />
+        <Mail className="h-7 w-7" />
       </a>
     </div>
   )
