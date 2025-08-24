@@ -89,8 +89,8 @@ export default function ContactForm() {
   return (
     <Card className="bg-gray-900 border-blue-500/30">
       <CardHeader>
-        <CardTitle className="text-3xl font-black text-white font-jakarta">
-          <span className="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-4xl text-transparent">
+        <CardTitle className="text-2xl md:text-3xl font-black text-white font-jakarta">
+          <span className="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-2xl md:text-4xl text-transparent">
             INVIA LA TUA RICHIESTA
           </span>
         </CardTitle>
@@ -118,7 +118,7 @@ export default function ContactForm() {
           <div>
             <Label
               htmlFor="nome"
-              className="text-white font-semibold font-deardorf text-3xl"
+              className="text-white font-semibold font-jakarta text-xl md:text-2xl"
             >
               {dict?.contactPage.form.nameLabel ?? "Nome *"}
             </Label>
@@ -126,8 +126,8 @@ export default function ContactForm() {
               id="nome"
               name="nome"
               required
-              className="bg-black border-blue-500/50 text-white text-2xl focus:border-blue-500 placeholder:text-xl placeholder:font-bold"
-              style={{ fontSize: "1.25rem", padding: "0.75rem" }}
+              className="bg-black border-blue-500/50 text-white text-base md:text-lg focus:border-blue-500 placeholder:text-base placeholder:font-bold"
+              style={{ fontSize: "1rem", padding: "0.6rem" }}
               placeholder={dict?.contactPage.form.namePlaceholder ?? "Il tuo nome"}
             />
           </div>
@@ -135,7 +135,7 @@ export default function ContactForm() {
           <div>
             <Label
               htmlFor="email"
-              className="text-white font-semibold font-deardorf text-3xl"
+              className="text-white font-semibold font-jakarta text-xl md:text-2xl"
             >
               {dict?.contactPage.form.emailLabel ?? "Email *"}
             </Label>
@@ -144,8 +144,8 @@ export default function ContactForm() {
               name="email"
               type="email"
               required
-              className="bg-black border-blue-500/50 text-white text-2xl focus:border-blue-500 placeholder:text-xl placeholder:font-bold"
-              style={{ fontSize: "1.25rem", padding: "0.75rem" }}
+              className="bg-black border-blue-500/50 text-white text-base md:text-lg focus:border-blue-500 placeholder:text-base placeholder:font-bold"
+              style={{ fontSize: "1rem", padding: "0.6rem" }}
               placeholder={dict?.contactPage.form.emailPlaceholder ?? "la tua mail"}
             />
           </div>
@@ -153,7 +153,7 @@ export default function ContactForm() {
           <div>
             <Label
               htmlFor="messaggio"
-              className="text-white font-semibold font-deardorf text-3xl"
+              className="text-white font-semibold font-jakarta text-xl md:text-2xl"
             >
               {dict?.contactPage.form.messageLabel ?? "Messaggio *"}
             </Label>
@@ -162,8 +162,8 @@ export default function ContactForm() {
               name="messaggio"
               required
               rows={6}
-              className="bg-black border-blue-500/50 text-white text-2xl focus:border-blue-500 placeholder:text-xl placeholder:font-bold"
-              style={{ fontSize: "1.25rem", padding: "0.75rem" }}
+              className="bg-black border-blue-500/50 text-white text-base md:text-lg focus:border-blue-500 placeholder:text-base placeholder:font-bold"
+              style={{ fontSize: "1rem", padding: "0.6rem" }}
               placeholder={dict?.contactPage.form.messagePlaceholder ?? "Descrivi la tua idea per il cappello personalizzato..."}
             />
           </div>
@@ -177,7 +177,7 @@ export default function ContactForm() {
 
           <Button
             type="submit"
-            className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-4 text-2xl tracking-wide font-deardorf"
+            className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-3 text-xl md:text-2xl tracking-wide font-jakarta"
           >
             {dict?.contactPage.form.submit ?? "INVIA RICHIESTA"}
           </Button>

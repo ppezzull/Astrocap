@@ -1,28 +1,16 @@
 @font-face {
-  font-family: 'Deardorf Demo';
-  src: url('../fonts/deardorf-demo/Deardorf Demo.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'Jakarta';
-  src: url('../fonts/jak-arta/JAK\ ARTA.ttf') format('truetype');
+  src: url('../fonts/grindy-brush/Grindy Brush.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 :root {
   --font-jakarta-jakarta: 'Jakarta', sans-serif;
-  --font-body-deardorf: 'Deardorf Demo', sans-serif;
+  --font-body-jakarta: 'jakarta Demo', sans-serif;
 }
 
 .font-jakarta {
   font-family: var(--font-jakarta-jakarta), sans-serif;
-  letter-spacing: 0.18em;
-}
-
-.font-deardorf {
-  font-family: var(--font-body-deardorf), sans-serif;
   letter-spacing: 0.06em;
 }

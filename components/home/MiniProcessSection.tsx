@@ -17,21 +17,21 @@ export default function MiniProcessSection({ heading, steps, cta }: { heading?: 
             { icon: Crown, title: steps?.create.title ?? "CREA", desc: steps?.create.desc ?? "Realizzo il tuo cappello" },
           ].map((step, index) => (
             <div key={index} className="text-center">
-              <div className="relative mb-6">
+              <div className="relative mb-8">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-500 rounded-full blur-xl opacity-50" />
                 <div className="relative bg-gradient-to-r from-blue-500 to-blue-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto">
                   <step.icon className="h-10 w-10 text-white" />
                 </div>
               </div>
-              <h3 className="text-4xl font-bold text-white mb-4 font-deardorf">{step.title}</h3>
-              <p className="text-gray-300 font-deardorf text-3xl">{step.desc}</p>
+              <h3 className="text-4xl font-bold text-white mb-4 font-jakarta">{step.title}</h3>
+              <p className="text-gray-300 font-jakarta text-3xl">{step.desc}</p>
             </div>
           ))}
         </div>
 
         <div className="text-center">
           <Link href="/process">
-            <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold px-8 py-4 text-2xl font-deardorf">{cta ?? "SCOPRI IL PROCESSO COMPLETO"}</Button>
+            <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold px-6 py-3 md:px-8 md:py-4 text-xl md:text-2xl font-deardorf">{cta ?? "SCOPRI IL PROCESSO COMPLETO"}</Button>
           </Link>
         </div>
       </div>

@@ -12,7 +12,7 @@ interface HeaderCtaButtonProps {
 }
 
 export function HeaderCtaButton({ compact = false, label = "DRIP NOW!", locale }: HeaderCtaButtonProps) {
-  const baseClasses = "bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold tracking-wide shadow-lg hover:shadow-blue-500/25 transition-all duration-300 font-deardorf"
+  const baseClasses = "bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold tracking-wide shadow-lg hover:shadow-blue-500/25 transition-all duration-300 font-jakarta"
   const sizeClasses = compact ? "px-3 py-1 text-lg" : "px-6 py-2 text-2xl"
 
   // Use provided locale if available; otherwise fallback to 'it'

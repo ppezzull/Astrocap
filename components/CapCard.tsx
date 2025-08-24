@@ -37,7 +37,7 @@ export function CapCard({ src, name, style }: CapCardProps) {
           </div>
           <div className="p-6 md:p-8 min-h-[140px] md:min-h-[200px] flex flex-col justify-end">
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-3 md:mb-4 font-jakarta">{name}</h3>
-            <p className="text-2xl md:text-3xl text-blue-400 font-semibold font-deardorf">{style}</p>
+            <p className="text-2xl md:text-3xl text-blue-400 font-semibold font-jakarta">{style}</p>
           </div>
         </BackgroundGradient>
       </CardContent>

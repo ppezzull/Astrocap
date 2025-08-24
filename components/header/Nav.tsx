@@ -11,19 +11,19 @@ export function HeaderNav({
     <>
       <Link
         href={`/${locale}/caps`}
-        className="text-white hover:text-blue-400 transition-colors font-bold text-2xl tracking-wide font-deardorf"
+  className="text-white hover:text-blue-400 transition-colors font-bold text-2xl tracking-wide font-jakarta"
       >
         {labels.caps}
       </Link>
       <Link
         href={`/${locale}/process`}
-        className="text-white hover:text-blue-400 transition-colors font-bold text-2xl tracking-wide font-deardorf"
+  className="text-white hover:text-blue-400 transition-colors font-bold text-2xl tracking-wide font-jakarta"
       >
         {labels.process}
       </Link>
       <Link
         href={`/${locale}/contact`}
-        className="text-white hover:text-blue-400 transition-colors font-bold text-2xl tracking-wide font-deardorf"
+  className="text-white hover:text-blue-400 transition-colors font-bold text-2xl tracking-wide font-jakarta"
       >
         {labels.contact}
       </Link>

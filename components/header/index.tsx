@@ -13,7 +13,7 @@ export default function Header({ dict, locale }: { dict: Dictionary; locale: str
   }
 
   return (
-    <header className="sticky top-0 z-50 bg-black/50 backdrop-blur-sm border-b border-blue-500/20">
+    <header className="sticky top-0 z-50 bg-black/50 backdrop-blur-sm border-b border-blue-500/20 font-jakarta">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between overflow-x-hidden">
         <HeaderLogo locale={locale} />
         <nav className="hidden md:flex items-center space-x-6">

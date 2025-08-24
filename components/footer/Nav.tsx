@@ -11,16 +11,16 @@ export function FooterNav({ labels }: { labels?: { home: string; caps: string; p
 
   return (
     <nav className="flex space-x-6">
-      <Link href={`/${locale}`} className="hover:text-blue-400 transition-colors font-deardorf text-2xl">
+  <Link href={`/${locale}`} className="hover:text-blue-400 transition-colors font-jakarta text-lg md:text-xl">
         {labels?.home ?? "HOME"}
       </Link>
-      <Link href={`/${locale}/caps`} className="hover:text-blue-400 transition-colors font-deardorf text-2xl">
+  <Link href={`/${locale}/caps`} className="hover:text-blue-400 transition-colors font-jakarta text-lg md:text-xl">
         {labels?.caps ?? "CAPS"}
       </Link>
-      <Link href={`/${locale}/process`} className="hover:text-blue-400 transition-colors font-deardorf text-2xl">
+  <Link href={`/${locale}/process`} className="hover:text-blue-400 transition-colors font-jakarta text-lg md:text-xl">
         {labels?.process ?? "PROCESS"}
       </Link>
-      <Link href={`/${locale}/contact`} className="hover:text-blue-400 transition-colors font-deardorf text-2xl">
+  <Link href={`/${locale}/contact`} className="hover:text-blue-400 transition-colors font-jakarta text-lg md:text-xl">
         {labels?.contact ?? "CONTACT"}
       </Link>
     </nav>

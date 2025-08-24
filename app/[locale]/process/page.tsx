@@ -11,8 +11,8 @@ export default async function ProcessPage(props: { params: { locale: string } })
     <div className="min-h-screen bg-black">
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-600">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-black text-white mb-6 tracking-wider font-jakarta">{dict.pages.process.title}</h1>
-          <p className="text-3xl text-white font-semibold font-deardorf">{dict.pages.process.subtitle}</p>
+            <h1 className="text-5xl md:text-7xl font-black text-white mb-6 font-jakarta">{dict.pages.process.title}</h1>
+            <p className="text-2xl md:text-3xl text-white font-semibold font-jakarta">{dict.pages.process.subtitle}</p>
         </div>
       </section>
       <ProcessIntro title={dict.processPage.intro.title} paragraph={dict.processPage.intro.paragraph} />
