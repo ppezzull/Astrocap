@@ -11,9 +11,10 @@ export interface CapCardProps {
   src: string
   name: string
   style: string
+  optimizedSrc?: string
 }
 
-export function CapCard({ src, name, style }: CapCardProps) {
+export function CapCard({ src, name, style, optimizedSrc }: CapCardProps) {
   const pathname = usePathname()
   const seg = (pathname?.split("/")[1] || "it")
   const locale = locales.includes(seg as any) ? (seg as any) : "it"
@@ -27,7 +28,7 @@ export function CapCard({ src, name, style }: CapCardProps) {
           <div className="relative overflow-hidden flex justify-center items-center rounded-t-[22px]" style={{ height: "300px" }}>
             <div className="" />
             <Image
-              src={src || "/placeholder.svg"}
+              src={optimizedSrc ?? src ?? "/placeholder.svg"}
               alt={name}
               width={260}
               height={260}

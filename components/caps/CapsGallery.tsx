@@ -1,4 +1,5 @@
 import { CapCard } from "@/components/CapCard"
+import { ensureOptimized } from "@/lib/server/image"
 
 const caps = [
   { src: "/images/caps/cap1.png", name: "Fiamma Nera", style: "NY Flames Edition" },
@@ -11,13 +12,25 @@ const caps = [
   { src: "/images/caps/cap8.png", name: "LA Dreams", style: "Dodgers Palm Style" },
 ]
 
-export default function CapsGallery() {
+export default async function CapsGallery() {
+  // generate optimized images for each cap (server-side)
+  const capsWithOptimized = await Promise.all(
+    caps.map(async (cap) => {
+      try {
+        const optimizedSrc = await ensureOptimized(cap.src, 520, "webp");
+        return { ...cap, optimizedSrc };
+      } catch (err) {
+        return { ...cap, optimizedSrc: undefined };
+      }
+    })
+  );
+
   return (
     <section className="py-20">
       <div className="w-full px-4 mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full max-w-screen-2xl items-stretch mx-auto">
-          {caps.map((cap, index) => (
-            <CapCard key={index} src={cap.src} name={cap.name} style={cap.style} />
+          {capsWithOptimized.map((cap, index) => (
+            <CapCard key={index} src={cap.src} optimizedSrc={(cap as any).optimizedSrc} name={cap.name} style={cap.style} />
           ))}
         </div>
       </div>
