@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="it" className="overflow-x-hidden">
-      <body className="bg-black font-jakarta overflow-x-hidden">
+      <body className="bg-black font-deardorf overflow-x-hidden">
         <main>{children}</main>
         <Toaster />
         <Footer />

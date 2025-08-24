@@ -87,7 +87,7 @@ export default function ContactForm() {
   };
 
   return (
-    <Card className="bg-gray-900 border-blue-500/30">
+    <Card className="bg-gray-900 border-blue-500/30 font-jakarta">
       <CardHeader>
         <CardTitle className="text-2xl md:text-3xl font-black text-white font-jakarta">
           <span className="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-2xl md:text-4xl text-transparent">

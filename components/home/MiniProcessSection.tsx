@@ -31,7 +31,7 @@ export default function MiniProcessSection({ heading, steps, cta }: { heading?: 
 
         <div className="text-center">
           <Link href="/process">
-            <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold px-6 py-3 md:px-8 md:py-4 text-xl md:text-2xl font-deardorf">{cta ?? "SCOPRI IL PROCESSO COMPLETO"}</Button>
+            <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold px-4 py-2 md:px-8 md:py-4 text-lg md:text-2xl font-jakarta">{cta ?? "SCOPRI IL PROCESSO COMPLETO"}</Button>
           </Link>
         </div>
       </div>

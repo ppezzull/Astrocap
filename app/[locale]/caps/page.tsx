@@ -10,7 +10,7 @@ export default async function CapsPage(props: { params: { locale: string } }) {
     <div className="min-h-screen bg-black">
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-600">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-[8rem] xl:text-[9rem] font-black text-white mb-6 tracking-normal md:tracking-wider leading-tight break-words font-jakarta">
+          <h1 className="text-4xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 tracking-normal md:tracking-wider leading-tight break-words font-jakarta">
             {dict.pages.caps.title}
           </h1>
         </div>

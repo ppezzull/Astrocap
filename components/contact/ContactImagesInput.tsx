@@ -29,10 +29,7 @@ const ContactImagesInput: React.FC<ContactImagesInputProps> = ({
 
   return (
     <div>
-      <label
-        htmlFor="files"
-        className="text-white font-semibold font-jakarta text-base sm:text-lg md:text-2xl"
-      >
+      <label htmlFor="files" className="text-white font-semibold font-jakarta text-xl">
         {dict?.contactPage.form.uploadLabel?.(maxImages) ?? `Invia il cappello che vuoi personalizzare (max ${maxImages} immagini)`}
       </label>
       {Array.from({ length: Math.min(filePreviews.length + 1, maxImages) }).map((_, idx) => (
