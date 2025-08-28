@@ -25,7 +25,8 @@ export default function Footer({ dict: dictProp, locale: localeProp }: { dict?: 
     home: dict?.nav.home ?? "HOME",
     caps: dict?.nav.caps ?? "CAPS",
     process: dict?.nav.process ?? "PROCESS",
-    contact: dict?.nav.contact ?? "CONTACT",
+  contact: dict?.nav.contact ?? "CONTACT",
+  editor: (dict as any)?.nav?.editor ?? "EDITOR",
   }
 
   return (

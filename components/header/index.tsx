@@ -10,6 +10,7 @@ export default function Header({ dict, locale }: { dict: Dictionary; locale: str
     caps: dict.nav.caps ?? "CAPS",
     process: dict.nav.process ?? "PROCESS",
     contact: dict.nav.contact ?? "CONTACT",
+  editor: (dict as any)?.nav?.editor ?? "EDITOR",
   }
 
   return (
