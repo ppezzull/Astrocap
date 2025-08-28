@@ -39,6 +39,11 @@ export default {
       subtitle: "Gawin itong totoo.",
       button: "DRIP NOW!",
     },
+    editorDemo: {
+      heading: "SUBUKAN ANG 3D EDITOR",
+      subtitle: "Kulayan ang sombrero nang real-time",
+      cta: "BUKSAN ANG EDITOR",
+    },
   },
   capsPage: {
     cta: {

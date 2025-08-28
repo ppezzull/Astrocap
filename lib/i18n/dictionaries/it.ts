@@ -41,6 +41,11 @@ export default {
       subtitle: "Rendila realtà.",
       button: "DRIP NOW!",
     },
+    editorDemo: {
+      heading: "PROVA L'EDITOR 3D",
+      subtitle: "Colora il cappello in tempo reale",
+      cta: "APRI L'EDITOR",
+    },
   },
   capsPage: {
     cta: {

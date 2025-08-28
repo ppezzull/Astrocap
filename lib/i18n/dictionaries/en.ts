@@ -39,6 +39,11 @@ export default {
       subtitle: "Make it real.",
       button: "DRIP NOW!",
     },
+    editorDemo: {
+      heading: "TRY THE 3D EDITOR",
+      subtitle: "Color the cap in real time",
+      cta: "OPEN THE EDITOR",
+    },
   },
   capsPage: {
     cta: {

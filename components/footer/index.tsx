@@ -31,7 +31,7 @@ export default function Footer({ dict: dictProp, locale: localeProp }: { dict?: 
 
   return (
     <footer style={{ backgroundColor: "rgb(15, 58, 175)" }} className="text-white py-8">
-      <div className="container mx-auto px-4 overflow-x-hidden">
+      <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <FooterCopyright text={dict?.footer.crafted} />
           <FooterNav labels={labels} />

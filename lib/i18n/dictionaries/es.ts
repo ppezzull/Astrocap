@@ -41,6 +41,11 @@ export default {
       subtitle: "Hazla realidad.",
       button: "DRIP NOW!",
     },
+    editorDemo: {
+      heading: "PRUEBA EL EDITOR 3D",
+      subtitle: "Colora la gorra en tiempo real",
+      cta: "ABRIR EL EDITOR",
+    },
   },
   capsPage: {
     cta: {
